@@ -6,7 +6,8 @@
 |name|string|null: false|
 |email|string|null: false|
 ### Association
-- has_many :message
+- has_many :messages
+- has_many  :groups,  through:  :group_users
 
 ## messageテーブル
 |Column|Type|Options|
@@ -23,10 +24,11 @@
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
-|chat_member|string|null: false|
+|name|string|null: false|unique: true
 ### Association
-- has_many :message
+- has_many :messages
+- has_many  :group_users
+- has_many  :users,  through:  :group_users
 
 ## groups_usersテーブル
 |Column|Type|Options|
