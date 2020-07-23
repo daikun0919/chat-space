@@ -28,9 +28,10 @@
 
   .mainChat__messageForm
     .mainChat__messageForm__text
-      .text
-        type a message
-      .image
-        = icon('fas', 'image')
-    .mainChat__messageForm__form_submit
-      Send
+      %form.new_message
+        .input-box
+          %input{type: "text" , class: "input-box__text" , placeholder: "type a message"}
+          %label{class: "input-box__image"}
+            = icon('fas', 'image')
+            %input{type: "file"}
+        %input{type: "submit" , class: "submit-btn"}
