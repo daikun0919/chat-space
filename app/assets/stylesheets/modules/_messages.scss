@@ -29,10 +29,15 @@
       }
       .botton{
         width: 60px;
-        color: #ffffff;
         display: flex;
         justify-content: flex-end;
-        margin-left: 5px;
+        .botton_1{
+          color: #ffffff;
+        }
+        .botton_2{
+          color: #ffffff;
+          margin-left: 5px;
+        }
       }
     }
   }
