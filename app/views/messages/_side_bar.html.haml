@@ -3,10 +3,13 @@
      
     .sideBar__user__userbox
       .name
-        test
+        = current_user.name
       .botton
-        = icon('fas', 'edit')
-        = icon('fas', 'cog')
+        .botton_1
+          = icon('fas', 'edit')
+        .botton_2
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog')
   
   .sideBar__groupList
     .sideBar__groupList__groupName
