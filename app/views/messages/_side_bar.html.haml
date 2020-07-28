@@ -13,12 +13,13 @@
             = icon('fas', 'cog')
   
   .sideBar__groupList
-    .sideBar__groupList__groupName
-      グループ名
+    - current_user.groups.each do |group|
+      .sideBar__groupList__groupName
+        = link_to '#' do
+          .sideBar__groupList__groupMessage
+            = group.name
+          .sideBar__groupList__groupName
+            メッセージはまだありません
 
-    .sideBar__groupList__groupMessage
-      テキスト
-    .sideBar__groupList__groupName
-      グループ名
 
     .sideBar__groupList__groupMessage
