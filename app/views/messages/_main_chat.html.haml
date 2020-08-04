@@ -1,37 +1,26 @@
 .mainChat
   .mainChat__groupInfo
     .text
-      test
+      =@group.name
       .memberName
-        Member:test
-    .edit
+        -@group.users.each do |num|
+          =num.name
+    
+    =link_to edit_group_path(@group),class: "edit" do 
       edit
 
   .mainChat__messageList
-    .groupChat
-      .groupChatname
-      test
-      .times
-      0000/00/00( ) 00:00:00
-    
-    .groupText
-      message
+    = render @messages
 
-    .groupChat
-      .groupChatname
-      test
-      .times
-      0000/00/00( ) 00:00:00
-    
-    .groupText
-      message
+
+  
+
 
   .mainChat__messageForm
-    .mainChat__messageForm__text
-      -# %form.new_message
+    = form_with model: [@group, @message], html: {class: "mainChat__messageForm__text"}, local: true do |f|
       .input-box
-        %input{type: "text" , class: "input-box__text" , placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file" , class: "input-box__file"}
-      %input{type: "submit" , class: "submit-btn"}
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
+          = icon('far', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'input-box__file'
+      = f.submit 'Send', class: 'submit-btn'

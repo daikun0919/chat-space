@@ -52,17 +52,20 @@
     }
     &__groupMessage{
       width: 260px;
+      color: white;
       font-size: 11px;
       padding: 0px 20px 40px 20px;
     }
   }
   &__groupName{
     width: 260px;
+    color: white;
     font-size: 15px;
     padding: 20px 20px 5px 20px;
   }
   &__groupMessage{
     width: 260px;
+    
     font-size: 11px;
     padding: 0px 20px 40px 20px;
   }
@@ -84,6 +87,7 @@
       font-size: 20px;
       color: #333333;
       padding: 35px 0 0 40px;
+      justify-content: flex-start;
       .memberName{
       font-size: 12px;
       color: #999999;
@@ -168,6 +172,7 @@
             width: 100%;
             color: #434a54;
             border-style: none;
+            padding-left: 10px;
           }
           &__image{
             cursor: pointer;
