@@ -44,6 +44,7 @@
   &__groupList{
     background-color: #2f3e51;
     height: calc(100% - 100px);
+    overflow: scroll;
     &__groupName{
       width: 260px;
       font-size: 15px;
@@ -105,6 +106,7 @@
   &__messageList{
     background-color: #fafafa;
     height: calc(100vh - 190px);
+    overflow: scroll;
     .groupChat{
       display: flex;
       .groupChatname{
