@@ -1,8 +1,10 @@
 $(function(){
+  
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="MessageBox">
+      `<div class="MessageBox" data-message-id=${message.id}>
+        <div class="MessageBox">
           <div class="groupChat">
             <div class="groupChatname">
               ${message.user_name}
@@ -18,10 +20,12 @@ $(function(){
             <img class="Message__image" src="${message.image}">
           </div>
         </div>`
+
       return html;
     } else {
       let html =
-      `<div class="MessageBox">
+      `<div class="MessageBox" data-message-id=${message.id}>
+      <div class="MessageBox">
         <div class="groupChat">
           <div class="groupChatname">
             ${message.user_name}
