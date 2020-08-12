@@ -6,7 +6,7 @@ $(function(){
       `<div class="MessageBox" data-message-id=${message.id}>
         <div class="MessageBox">
           <div class="groupChat">
-            <div class="groupChatname">
+            <div class="groupChat-name">
               ${message.user_name}
             </div>
             <div class="times">

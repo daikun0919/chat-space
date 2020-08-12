@@ -3,15 +3,15 @@ $(function(){
     if ( message.image ) {
       let html =
         `<div class="MessageBox" data-message-id=${message.id}>
-          <div class="MessageInfo">
-            <div class="MessageInfo__userName">
+          <div class="groupChat">
+            <div class="groupChatname">
               ${message.user_name}
             </div>
-            <div class="MessageInfo__date">
+            <div class="times">
               ${message.created_at}
             </div>
           </div>
-          <div class="Message">
+          <div class="groupText">
             <p class="Message__content">
               ${message.content}
             </p>
@@ -22,15 +22,15 @@ $(function(){
     } else {
       let html =
       `<div class="MessageBox" data-message-id=${message.id}>
-        <div class="MessageInfo">
-          <div class="MessageInfo__userName">
+        <div class="groupChat">
+          <div class="groupChatname">
             ${message.user_name}
           </div>
-          <div class="MessageInfo__date">
+          <div class="times">
             ${message.created_at}
           </div>
         </div>
-        <div class="Message">
+        <div class="groupText">
           <p class="Message__content">
             ${message.content}
           </p>
@@ -62,8 +62,8 @@ $(function(){
           insertHTML += buildHTML(message)
         });
         //メッセージが入ったHTMLに、入れ物ごと追加
-        $('.MessageField').append(insertHTML);
-        $('.MessageField').animate({ scrollTop: $('.MessageField')[0].scrollHeight});
+        $('.mainChat__messageList').append(insertHTML);
+        $('.mainChat__messageList').animate({ scrollTop: $('.mainChat__messageList')[0].scrollHeight});
       }
     })
     .fail(function() {
