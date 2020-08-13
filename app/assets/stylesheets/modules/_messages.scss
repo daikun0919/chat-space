@@ -32,14 +32,15 @@
         display: flex;
         justify-content: flex-end;
         .botton_1{
-          color: #ffffff;
+          a {color: #ffffff;
+          }
         }
         .botton_2{
-          color: #ffffff;
+          a {color: #ffffff;
+          }
           margin-left: 5px;
         }
-      }
-    }
+    } }
   }
   &__groupList{
     background-color: #2f3e51;

@@ -4,7 +4,6 @@ $(function(){
     if ( message.image ) {
       let html =
       `<div class="MessageBox" data-message-id=${message.id}>
-        <div class="MessageBox">
           <div class="groupChat">
             <div class="groupChat-name">
               ${message.user_name}
@@ -25,7 +24,6 @@ $(function(){
     } else {
       let html =
       `<div class="MessageBox" data-message-id=${message.id}>
-      <div class="MessageBox">
         <div class="groupChat">
           <div class="groupChatname">
             ${message.user_name}
