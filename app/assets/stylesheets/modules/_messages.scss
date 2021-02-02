@@ -26,6 +26,7 @@
       .name{
         color: #ffffff;
         font-size: 16px;
+        font-weight: bold;
       }
       .botton{
         width: 60px;
@@ -49,13 +50,16 @@
     &__groupName{
       width: 260px;
       font-size: 15px;
-      color: #ffffff bold;
-      padding: 20px 20px 5px 20px;
+      color: #ffffff;
+      font-weight: bold;
+      box-sizing: border-box;
+      padding: 20px 0 40px;
     }
     &__groupMessage{
       width: 260px;
       color: white;
-      font-size: 11px;
+      font-size: 15px;
+      font-weight: bold;
       padding: 0px 20px 40px 20px;
     }
   }
